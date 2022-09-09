@@ -5,22 +5,26 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-    int tens;
-    int ones;
+int main(void)
+{
+	int t;
+	int p;
 
-    for (tens = 0; tens <= 9; tens++) {
-        for (ones = tens + 1; ones <= 9; ones++) {
-            putchar(tens + '0');
-            putchar(ones + '0');
+	for (t = 0; t <= 9; t++)
+	{
+		for (p = t + 1; p <= 9; p++)
+		{
+			putchar(t + '0');
+			putchar(p + '0');
 
-            if (tens < 8) {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-    }
-    putchar('\n');
+			if (t < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
