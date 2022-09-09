@@ -35,7 +35,6 @@ int main(void)
 					}
 				}
 				b = 48;
-:w
 			}
 		}
 	}
