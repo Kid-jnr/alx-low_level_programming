@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* printing the alphabet */
+/** 
+ * main - Entry point
+ *
+ * printing the alphabet 
+ */
 int main(void)
 {
 	char c;
