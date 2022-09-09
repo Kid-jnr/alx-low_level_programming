@@ -18,7 +18,7 @@ int main(void)
 		for (a = 48; a < 58; a++)
 		{
 			b = a + 1;
-			bfirst = bfirst;
+			bfirst = ast;
 			for (; bfirst < 58; bfirst++)
 			{
 				for (; b < 58; b++)
@@ -28,7 +28,7 @@ int main(void)
 					putchar(' ');
 					putchar(bfirst);
 					putchar(b);
-					if (ast != 57 || ast != 57 || a != 56 || b != 57)
+					if (ast != 57 || bfirst != 57 || a != 56 || b != 57)
 					{
 						putchar(',');
 						putchar(' ');
