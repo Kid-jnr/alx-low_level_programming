@@ -6,33 +6,25 @@
  *
  * Return: A pointer to the changed string.
  */
-char *cap_string(char *str)
+
+char *cap_string(char *a)
 {
-	int index = 0;
+	int newword = 1;
+	char *ptr = a;
 
-	while (str[index])
+	while (*ptr != 0)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-
-		index++;
+		if (newword == 1)
+		{
+			newword = 0;
+			if (*ptr < 'z' && *ptr > 'a')
+				*ptr -= 32;
+		}
+		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ','
+		    || *ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '"'
+		    || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}')
+			newword = 1;
+		ptr++;
 	}
-
-	return (str);
+	return (a);
 }
